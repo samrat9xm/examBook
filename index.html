@@ -23,7 +23,7 @@
 	background: #D83B01;
 	overflow: hidden;
 	position: fixed;
-	height: 90.5px;
+	height: 65px;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -49,27 +49,58 @@
 	text-shadow: 5px 5px 15px #000;
 
 }
-.a3{list-style-type: none;
-text-align: center;
-margin-top: 42px;
-padding: 0}
-.a3 li{display: inline-block;
-text-align: center;
-margin: 1px;
-padding: 1px;}
-.a3 a{text-decoration: none;
-display: block;
-padding: 1px;
-color: #fff;
-font-family: verdana;
-font-size: 10pt;
 
-}
-
-.a3 a:hover{
-	text-shadow: 5px 5px 10px #000;
+.a3{
+	text-align: center;
+	margin-top: 42px;
 	color: white;
+	font-family: verdana;
 }
+
+
+.menu{
+position: relative;
+top: 70px;
+}
+
+.menu ul{list-style-type: none;
+text-align: center;
+padding: 0;
+
+}
+
+.menu li{
+	padding: 0;
+
+	width: 150px;
+	text-align: center;
+	display: inline-block;
+
+
+}
+
+.menu li a{
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+	color: black;
+	border: 5px solid white;
+	border-radius: 5px;
+	background: tomato;
+	box-shadow: 0 1px 6px 0 #000;
+	font-family: verdana;
+	color: white;
+
+
+}
+
+.menu li a:hover{
+	background: black;
+	color: white;
+	transition: 0.5s ease;
+}
+
 
 
 
@@ -80,7 +111,7 @@ font-size: 10pt;
     padding-bottom: 10px;
     color: grey;
     position: absolute;
-    top: 95%;
+    top: 90%;
     left: 0;
     right: 0;
     margin: auto;
@@ -95,7 +126,7 @@ font-size: 10pt;
     padding-bottom: 10px;
     color: grey;
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 0;
     right: 0;
     margin: auto;
@@ -116,22 +147,24 @@ font-size: 10pt;
 
 <div class="a1">
 	<a class="a2" href="index.html">Exam<span>.bd</span></a>
-
-	<ul class="a3">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="#">Bangla</a></li>
-		<li><a href="English.html">English</a></li>
-		<li><a href="#">Mathematics</a></li>
-		<li><a href="#">International aff.</a></li>
-		<li><a href="#">Bangladesh aff.</a></li>
-		<li><a href="#">ICT</a></li>
-		
-		
-		
-	</ul>
+	<p class="a3">Home</p>
 </div>
 <!--=============================================================================
 	============================================================================-->
+
+	<div class="menu">
+
+		<ul>
+			
+		<li><a href="#">Bangla</a></li><br>
+		<li><a href="English.html">English</a></li><br>
+		<li><a href="#">Mathematics</a></li><br>
+		<li><a href="#">International aff.</a></li><br>
+		<li><a href="#">Bangladesh aff.</a></li><br>
+		<li><a href="#">ICT</a></li>
+		</ul>
+		
+	</div>
 
 
  <div class="badge">
