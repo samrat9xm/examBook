@@ -9,6 +9,12 @@
 	
 
 <style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
 	
 	body{
 	margin: 0;
@@ -22,8 +28,8 @@
 .a1{
 	background: #D83B01;
 	overflow: hidden;
-	position: fixed;
-	height: 90.5px;
+	position: relative;
+	height: 50.5px;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -43,37 +49,85 @@
 	display: block;
 	position: absolute;
 	text-align: center;
+	top: 5px;
 }
 
 .a2:hover{
 	text-shadow: 5px 5px 15px #000;
-
-}
-.a3{list-style-type: none;
-text-align: center;
-margin-top: 42px;
-padding: 0}
-.a3 li{display: inline-block;
-text-align: center;
-margin: 1px;
-padding: 1px;}
-.a3 a{text-decoration: none;
-display: block;
-padding: 1px;
-color: #fff;
-font-family: verdana;
-font-size: 10pt;
-
 }
 
-.a3 a:hover{
-	text-shadow: 5px 5px 10px #000;
+.a3{
+	position: relative;
+	top:10px;
+	right: 21px;
+	display: block;
+	color: white;
+	text-align: center;
+	float: right;
+	text-decoration: none;
+	font-family: sans-serif;
+	width: 10%;
+	padding: 5px;
+}
+
+.a3:hover{
+	background: black;
 	color: white;
 }
 
+.menu-bar{
+	background: transparent;
+	text-align: left;
+	font-family: sans-serif;
+position: relative;
+top:-63px;
+width: 15%
+
+}
+
+.menu-bar ul{
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+	margin-left: -17px;
+}
+
+.menu-bar ul li{
+	width: 120px;
+	margin: 15px;
+	padding: 15px;
+}
+
+.menu-bar ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.active, .menu-bar ul li:hover{
+	background: black;
+	border-radius: 3px;
+}
+
+.sub-menu-1{
+	display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1{
+	display: block;
+	position: absolute;
+	background: rgb(0,100,0);
+	margin-top: 15px;
+	margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul{
+	display: block;
+	margin: 10px;
+}
+
 iframe{
-	margin-top: 90px;
-	height: 398px;
+	margin-top: -76px;
+	height: 482px;
 	width: 100%;
 	border: none;
 }
@@ -112,17 +166,29 @@ iframe{
 
 
 <div class="a1">
-	<a class="a2" href="index.html">Exam<span>.bd</span></a>
+	<a class="a2" href="index.html">Exam.bd</a>
+	<a class="a3" href="index.html">Home</a>
+</div>
 
-	<ul class="a3">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="Bangla.html">Bangla</a></li>
-		<li><a href="English.html">English</a></li>
-		<li><a href="Mathematics.html">Mathematics</a></li>
-		<li><a href="International.html">International aff.</a></li>
-		<li><a href="Bangladesh.html">Bangladesh aff.</a></li>
-		<li><a href="ICT.html">ICT</a></li>
+<div class="menu-bar">
+	<ul>
 		
+		<li>Menu
+			<div class="sub-menu-1">
+				<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="Bangla.html">Bangla</a></li>
+						<li><a href="English.html">English</a></li>
+						<li><a href="Mathematics.html">Mathematics</a></li>
+						<li><a href="International.html">International</a></li>
+						<li><a href="Bangladesh.html">Bangladesh</a></li>
+						<li><a href="ICT.html">ICT</a></li>
+				</ul>
+			</div>
+		</li>
+		
+
+
 	</ul>
 </div>
 <!--=============================================================================
