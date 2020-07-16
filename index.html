@@ -105,6 +105,26 @@ function time(){
 	font-family: verdana;
 }
 
+#routine{
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+	color: black;
+	border: 5px solid white;
+	border-radius: 5px;
+	background: #009879;
+	box-shadow: 0 1px 6px 0 #000;
+	font-family: verdana;
+	color: white;
+}
+
+#routine:hover{
+	background: black;
+	color: white;
+	transition: 0.5s ease;
+}
+
 
 .menu{
 margin-top: 28px;
@@ -148,6 +168,58 @@ padding: 0;
 	color: white;
 	transition: 0.5s ease;
 }
+
+#boom{
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 0;
+	font-family: sans-serif;
+
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 300px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
 
 
 .footer{
@@ -227,6 +299,7 @@ footer a{
 	<div class="menu">
 
 		<ul>
+		<li><a id="routine" href="boom" target="">Routine</a></li><br>
 		<li><a href="Bangla.html" target="_blank">Bangla</a></li><br>
 		<li><a href="English.html" target="_blank">English</a></li><br>
 		<li><a href="Mathematics.html" target="_blank">Mathematics</a></li><br>
@@ -237,7 +310,57 @@ footer a{
 		</ul>
 		
 	</div>
+<!--Table---------------------------------------------------------------------------->
+	<div class="table">
+		<table id="boom" class="content-table">
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Day</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+       <td>Mathematics</td>
+      <td>Sat</td>
+      <td>10:00 pm</td>
+    </tr>
+    <tr class="active-row">
+      <td>Bangladesh</td>
+      <td>Sun</td>
+      <td>10:00 pm</td>
+    </tr>
+    <tr>
+      <td>International</td>
+      <td>Mon</td>
+      <td>10:00 pm</td>
+    </tr>
+    <tr>
+      <td>English</td>
+      <td>Tue</td>
+      <td>10:00 pm</td>
+    </tr>
+    <tr>
+      <td>ICT</td>
+      <td>Wed</td>
+      <td>10:00 pm</td>
+    </tr>
+    <tr>
+      <td>Bangla Gr.</td>
+      <td>Thu</td>
+      <td>10:00 pm</td>
+    </tr>
+     <tr>
+      <td>Bangla Lit.</td>
+      <td>Fri</td>
+      <td>10:00 pm</td>
+    </tr>
 
+  </tbody>
+</table>
+</div>
+<!--Table---------------------------------------------------------------------------->
 	 <footer>
     	<script type="text/javascript" src="https://freehitcounters.org/count/61co"></script><br>
  <a href='https://www.horando.de/'>Horando</a> <script type='text/javascript' src='https://whomania.com/ctr?id=10a80861ed4ef56b63a284a2356e3c10638aed88'></script>
