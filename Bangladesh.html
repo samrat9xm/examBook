@@ -1,57 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Exam.bd</title>
+	<title>exambook</title>
+	<link rel="shortcut icon" href="https://samrat9xm.github.io/exam/start/1.ico">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-
-
-<script>
-    // Created by Trouty McSquire
-
-//Declare function to start timer
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = 0
-        } 
-    },
-
-    1000)
-
-//Declare variable to time in miliseconds and set function for window alert
-    var totalMins = 302000
-    
-    setTimeout( function () { 
-        alert( "আপনার সময় শেষ! দয়া করে সাবমিট করুন!" ); 
-    }, 
-     totalMins);
-}
-
-
-//Sets the counter to three minutes 
-//Change variable to chosen time 
-    window.onload = function () {
-    var fiveMinute = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinute, display);
-
-};
-    
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+   
+    $('.menu-line').click(function(){
+      $('.menu-container').toggleClass('active');
+      $('.menu-line').toggleClass('line');
+      $('.menu-line').toggleClass('opacity');
+      $('.shadow').toggleClass('shadow_opac');
+       })
+       
+   });
+      
 </script>
-
 
 	
 
@@ -73,10 +43,10 @@ function startTimer(duration, display) {
 }
 
 .a1{
-	background: #D83B01;
+	background: #0984e3;
 	overflow: hidden;
 	position: relative;
-	height: 50.5px;
+	height: 59px;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -91,12 +61,15 @@ function startTimer(duration, display) {
 	color: #fff;
 	text-decoration: none;
 	font-size: 30px;
-	font-family: cursive;
-	width: 100%;
+	font-family: tahoma;
+	width: 160px;
 	display: block;
-	position: absolute;
 	text-align: center;
-	top: 5px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 .a2:hover{
@@ -104,74 +77,136 @@ function startTimer(duration, display) {
 }
 
 .a3{
-	position: relative;
-	top:10px;
-	right: 21px;
-	display: block;
+	text-align: right;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 	color: white;
-	text-align: center;
-	float: right;
-	text-decoration: none;
-	font-family: sans-serif;
-	width: 10%;
-	padding: 5px;
 }
 
 .a3:hover{
-	background: black;
-	color: white;
+	text-shadow: 5px 5px 15px #000;
 }
 
-.menu-bar{
-	background: transparent;
-	text-align: left;
-	font-family: sans-serif;
-position: relative;
-top:-63px;
-width: 15%
 
+
+.menu-container {
+    position:absolute;
+    width:180px;
+    height:100%;
+    left:-192px;
+    top:0;
+    z-index:10;
+    background:#fff;
+    transition:all 0.3s ease;
+    font-family: 'Josefin Sans', sans-serif; 
+    box-shadow: 0 1px 6px 0 #000;
+}
+.active {
+    left:0;
+    }
+
+.menu-container  .bg-image{
+    position:relative;
+    width:100%;
+    height:60px;
+    background-color:#0984e3;
+    box-shadow: 0 3px 4px -1px rgba(0,0,0,0.25);
+}
+.menu-container p{
+    position:absolute;
+    left:18px;
+    top:21px;
+    text-transform:uppercase;
+    font-size:1.5em;
+    font-weight:700;
+    color:#fff;
+    }
+.menu-line {
+    width:40px;
+    height:40px;
+    position:relative;
+    top:10px;
+    left:118%;
+    z-index:999;
+    transition:0.5s ease;
+    }
+.line {
+    left:73%;
+    }
+.menu-line div {
+    position:absolute;
+    width:30px;
+    height:5px;
+    background:#fff;
+    left:22%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border-radius:3px;
+    transition:0.5s ease;
+    }
+.menu-line.opacity div {
+    background:transparent;
+    }
+.menu-line.opacity div:before{
+    top:0;
+    transform:rotate(45deg);
+    }
+.menu-line.opacity div:after{
+    top:0;
+    transform:rotate(-45deg);
+    }
+
+.menu-line div:before,.menu-line div:after {
+    content:" ";
+    position:absolute;
+    width:30px;
+    height:5px;
+    background:#fff;
+    left:50%;
+    border-radius:3px;
+    transform:translateX(-50%);
+    transition:0.5s ease;
+    }
+.menu-line div:before{
+    top:-10px;
+    }
+.menu-line div:after{
+    top:10px;
+    }
+
+.menu-container ul li a {
+    position:relative;
+    width:100%;
+    line-height:50px;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:17px;
+    color:#000;
+    transition:all 0.5s ease;
+    }
+.menu-container ul li a i {
+    margin-right:30px;
+    font-size:16px;
+    color:#828282;
+    }
+.menu-container ul li:first-child{
+    margin-top:10px;
+    }
+.menu-container ul li:nth-child(8){
+    border-bottom:1px solid #aaa;
+    }
+
+.menu-container ul li:hover a{
+    margin-left:40px;
+    }
+
+.menu-container ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.menu-bar ul{
-	display: inline-flex;
-	list-style: none;
-	color: #fff;
-	margin-left: -17px;
-}
-
-.menu-bar ul li{
-	width: 120px;
-	margin: 15px;
-	padding: 15px;
-}
-
-.menu-bar ul li a{
-	text-decoration: none;
-	color: #fff;
-}
-
-.active, .menu-bar ul li:hover{
-	background: black;
-	border-radius: 3px;
-}
-
-.sub-menu-1{
-	display: none;
-}
-
-.menu-bar ul li:hover .sub-menu-1{
-	display: block;
-	position: absolute;
-	background: rgb(0,100,0);
-	margin-top: 15px;
-	margin-left: -15px;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul{
-	display: block;
-	margin: 10px;
-}
-	
 /*-------------------Countdown--------------------------*/
 
 .countdown
@@ -182,7 +217,7 @@ width: 15%
     color:white;
     font-size: 20px;
     text-align: center;
-    margin-top: -77px;
+    margin-top: -3px;
 }
 
 span
@@ -195,20 +230,18 @@ span
 	
 
 iframe{
-	margin-top: 10px;
+	margin-top: 6px;
 	height: 482px;
 	width: 100%;
 	border: none;
 }
-
-
 
 .copyright {
     font-size: 10pt;
     text-align: center;
     padding-bottom: 10px;
     color: grey;
-    margin-top: 12px;
+    margin-top: 100px;
     font-family: verdana;
 }
 
@@ -236,33 +269,35 @@ iframe{
 
 
 <div class="a1">
-	<a class="a2" href="index.html">Exam.bd</a>
-	<a class="a3" href="index.html">Home</a>
+	<a class="a2" href="https://samrat9xm.github.io/exam/">exambook</a>
+	<a class="a3" href="https://samrat9xm.github.io/exam/"><i class="fas fa-home"></i></a>
 </div>
 
-<div class="menu-bar">
-	<ul>
-		
-		<li>Menu
-			<div class="sub-menu-1">
-				<ul>
-						<li><a href="start/start-bangla.html" >বাংলা</a></li>
-						<li><a href="start/start-english.html" >English</a></li>
-						<li><a href="start/start-math.html" ">গনিত</a></li>
-						<li><a href="start/start-international.html" >আন্তর্জাতিক</a></li>
-						<li><a href="start/start-bangladesh.html" >বাংলাদেশ</a></li>
-						<li><a href="start/start-ict.html" >ICT</a></li>
-						<li><a href="start/start-science.html" >বিজ্ঞান</a></li>
-					
-				</ul>
-			</div>
-		</li>
-		
+
+   <div class="menu-container">
+      <div class="bg-image">
+          <div class="menu-line">
+          <div></div>
+      </div>
+    </div>
+        
+    <p>Menu</p>
+        
+    <ul>
+            <li><a href="https://samrat9xm.github.io/exam/"><i class="fas fa-home"></i>Home</a></li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-bangla.html"><i class="fas fa-book"></i>বাংলা</a> </li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-english.html"><i class="fas fa-book"></i>English</a> </li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-math.html"><i class="fas fa-book"></i>গনিত</a> </li>
+            <li><a href="https://samrat9xm.github.io/exam/start/start-bangladesh.html"><i class="fas fa-book"></i>বাংলাদেশ</a></li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-international.html"><i class="fas fa-book"></i>আন্তর্জাতিক</a></li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-ict.html"><i class="fas fa-book"></i>ICT</a></li>
+            <li><a href="https://samrat9xm.github.io/exam/start/start-science.html"><i class="fas fa-book"></i>বিজ্ঞান</a></li> 
+     </ul>
+  </div>
 
 
-	</ul>
-</div>
-	
+<!--=============================================================================
+	============================================================================-->
 <!--Create the time display in a div tag-->
    <div class="countdown">
         <!--Put time in span -->
@@ -273,13 +308,18 @@ iframe{
 	============================================================================-->
 
 	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSce4wcYVi4w6pm-3_n8QtcJnkvbnI6fzE4WWNG3LiuAwU4ihw/viewform?embedded=true" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+
+ 
+
      <div class="copyright">
      	<div class="badge">
-        Samrat Inc.
+        Samrat, Inc.
     </div>
 
 
-        &copy; 2020 Exam.bd. All rights reserved.
+        &copy; 2020 exambook All rights reserved.
     </div>
 
 </body>
