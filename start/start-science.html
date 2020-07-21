@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Exam.bd</title>
+	<title>exambook</title>
+    <link rel="shortcut icon" href="start/1.ico">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+   
+    $('.menu-line').click(function(){
+      $('.menu-container').toggleClass('active');
+      $('.menu-line').toggleClass('line');
+      $('.menu-line').toggleClass('opacity');
+      $('.shadow').toggleClass('shadow_opac');
+       })
+       
+   });
+      
+</script>
 
 	
 
@@ -26,10 +43,10 @@
 }
 
 .a1{
-	background: #D83B01;
+	background: #0984e3;
 	overflow: hidden;
 	position: relative;
-	height: 50.5px;
+	height: 59px;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -44,11 +61,12 @@
 	color: #fff;
 	text-decoration: none;
 	font-size: 30px;
-	font-family: cursive;
+	font-family: verdana;
 	width: 100%;
 	display: block;
 	position: absolute;
 	text-align: center;
+	margin-top: 7px;
 }
 
 .a2:hover{
@@ -70,66 +88,134 @@
 }
 
 .a3:hover{
-	background: black;
-	color: white;
+	text-shadow: 5px 5px 15px #000;
 }
 
 
 
-.menu-bar{
-	background: transparent;
-	text-align: left;
-	font-family: sans-serif;
-position: relative;
-top:-63px;
-width: 15%
+.menu-container {
+    position:absolute;
+    width:180px;
+    height:100%;
+    left:-192px;
+    top:0;
+    z-index:10;
+    background:#fff;
+    transition:all 0.5s ease;
+    font-family: 'Josefin Sans', sans-serif; 
+    box-shadow: 0 1px 6px 0 #000;
+}
+.active {
+    left:0;
+    }
 
+.menu-container  .bg-image{
+    position:relative;
+    width:100%;
+    height:60px;
+    background-color:#0984e3;
+    box-shadow: 0 3px 4px -1px rgba(0,0,0,0.25);
+}
+.menu-container p{
+    position:absolute;
+    left:18px;
+    top:21px;
+    text-transform:uppercase;
+    font-size:1.5em;
+    font-weight:700;
+    color:#fff;
+    }
+.menu-line {
+    width:40px;
+    height:40px;
+    position:relative;
+    top:10px;
+    left:118%;
+    z-index:999;
+    transition:0.5s ease;
+    }
+.line {
+    left:73%;
+    }
+.menu-line div {
+    position:absolute;
+    width:30px;
+    height:5px;
+    background:#fff;
+    left:22%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border-radius:3px;
+    transition:0.5s ease;
+    }
+.menu-line.opacity div {
+    background:transparent;
+    }
+.menu-line.opacity div:before{
+    top:0;
+    transform:rotate(45deg);
+    }
+.menu-line.opacity div:after{
+    top:0;
+    transform:rotate(-45deg);
+    }
+
+.menu-line div:before,.menu-line div:after {
+    content:" ";
+    position:absolute;
+    width:30px;
+    height:5px;
+    background:#fff;
+    left:50%;
+    border-radius:3px;
+    transform:translateX(-50%);
+    transition:0.5s ease;
+    }
+.menu-line div:before{
+    top:-10px;
+    }
+.menu-line div:after{
+    top:10px;
+    }
+
+.menu-container ul li a {
+    position:relative;
+    width:100%;
+    line-height:50px;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:17px;
+    color:#000;
+    transition:all 0.5s ease;
+    }
+.menu-container ul li a i {
+    margin-right:30px;
+    font-size:16px;
+    color:#828282;
+    }
+.menu-container ul li:first-child{
+    margin-top:10px;
+    }
+.menu-container ul li:nth-child(8){
+    border-bottom:1px solid #aaa;
+    }
+
+.menu-container ul li:hover a{
+    margin-left:40px;
+    }
+
+.menu-container ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.menu-bar ul{
-	display: inline-flex;
-	list-style: none;
-	color: #fff;
-	margin-left: -17px;
-}
 
-.menu-bar ul li{
-	width: 120px;
-	margin: 15px;
-	padding: 15px;
-}
-
-.menu-bar ul li a{
-	text-decoration: none;
-	color: #fff;
-}
-
-.active, .menu-bar ul li:hover{
-	background: black;
-	border-radius: 3px;
-}
-
-.sub-menu-1{
-	display: none;
-}
-
-.menu-bar ul li:hover .sub-menu-1{
-	display: block;
-	position: absolute;
-	background: rgb(0,100,0);
-	margin-top: 15px;
-	margin-left: -15px;
-}
-
-.menu-bar ul li:hover .sub-menu-1 ul{
-	display: block;
-	margin: 10px;
-}
 
 .bangla{
 	font-size: 20px;
 	text-align: center;
-	margin-top: -62px;
+	margin-top: 20px;
 
 }
 
@@ -143,31 +229,45 @@ width: 15%
 
 .notice{
 	text-align: center;
-	background: transparent;
+	background: #fff;
 	margin-top: 50px;
+    border-radius: 50px
 }
 .notice p{
 	border: 5px solid black;
-	border-radius: 5px;
+	border-radius: 50px;
 	padding: 5px;
-}
-.notice a{
-	text-decoration: none;
-	font-family: sans-serif;
-	font-size: 17px;
 }
 
 .notice span{
-	font-size: 18pt;
+	font-size: 15pt;
+    color: red;
 }
 
-button{
-	padding: 15px;
-	background: aqua;
-	border-radius: 5px;
-	margin-top: 10px;
 
+        .start {
+            font-family: verdana;
+            top: 10px;
+            text-align: center;
+            background: #00A400;
+            padding: 16px;
+            width: 150px;
+            position: relative;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28)
+        }
+
+        .start a{
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #fff;
 }
+
+        .start:hover {
+            background: rgba(0, 164, 0, 0.89);
+        }
 
 
 
@@ -204,33 +304,31 @@ button{
 
 
 <div class="a1">
-	<a class="a2" href="https://samrat9xm.github.io/exam/">Exam.bd</a>
-	<a class="a3" href="https://samrat9xm.github.io/exam/">Home</a>
+	<a class="a2" href="https://samrat9xm.github.io/exam/">exambook</a>
+	<a class="a3" href="https://samrat9xm.github.io/exam/"><i class="fas fa-home"></i></a>
 </div>
 
 
-<div class="menu-bar">
-	<ul>
-		
-		<li>Menu
-			<div class="sub-menu-1">
-				<ul>
-						
-						<li><a href="https://samrat9xm.github.io/exam/start/start-bangla">বাংলা</a></li>
-						<li><a href="https://samrat9xm.github.io/exam/start/start-english">English</a></li>
-						<li><a href="https://samrat9xm.github.io/exam/start/start-math">গনিত</a></li>
-						<li><a href="https://samrat9xm.github.io/exam/start/start-international">আন্তর্জাতিক</a></li>
-						<li><a href="https://samrat9xm.github.io/exam/start/start-bangladesh">বাংলাদেশ</a></li>
-						<li><a href="https://samrat9xm.github.io/exam/start/start-ict">ICT</a></li>
-						<li><a href="https://samrat9xm.github.io/exam/start/start-science">বিজ্ঞান</a></li>
-				</ul>
-			</div>
-		</li>
-		
-
-
-	</ul>
-</div>
+   <div class="menu-container">
+      <div class="bg-image">
+          <div class="menu-line">
+          <div></div>
+      </div>
+    </div>
+        
+    <p>Menu </p>
+        
+    <ul>
+            <li><a href="https://samrat9xm.github.io/exam/"><i class="fas fa-home"></i>Home</a></li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-bangla.html"> <i class="fas fa-book"></i>বাংলা</a> </li> 
+            <li> <a href="https://samrat9xm.github.io/exam/start/start-english.html"> <i class="fas fa-book"></i>English</a> </li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-math.html"> <i class="fas fa-book"></i>গনিত</a> </li>
+            <li> <a href="https://samrat9xm.github.io/exam/start/start-bangladesh.html"> <i class="fas fa-book"></i>বাংলাদেশ</a> </li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-international.html"> <i class="fas fa-book"></i>আন্তর্জাতিক</a></li> 
+            <li><a href="https://samrat9xm.github.io/exam/start/start-ict.html"> <i class="fas fa-book"></i>ICT</a> </li>
+            <li><a href="https://samrat9xm.github.io/exam/start/start-science.html"> <i class="fas fa-book"></i>বিজ্ঞান</a>  </li> 
+     </ul>
+  </div>
 
 
 <!--=============================================================================
@@ -241,22 +339,26 @@ button{
 
 
 <div class="notice">
-	<p> পরীক্ষা শুরু করতে <span>start</span> বাটনে ক্লিক করুন।<br>
+	<p> পরীক্ষা শুরু করতে নিচের <span>start</span> বাটনে ক্লিক করুন।<br>
 		সময় : ৫ মিনিট<br>
-পূর্ণমান : ১০</p> <br>
-
-	<button><a href="https://samrat9xm.github.io/exam/Science"><b>Start</b></a></button>
+পূর্ণমান : ১০</p> 
 </div>
+<br>
+<div class="start">
+        <a href="https://samrat9xm.github.io/exam/Science"><b>Start</b></a>
+    </div>
+
+
 
  
 
      <div class="copyright">
      	<div class="badge">
-        Samrat Inc.
+        Samrat, Inc.
     </div>
 
 
-        &copy; 2020 Exam.bd. All rights reserved.
+        &copy; 2020 exambook All rights reserved.
     </div>
 
 </body>
