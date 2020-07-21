@@ -5,6 +5,53 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
+<script>
+    // Created by Trouty McSquire
+
+//Declare function to start timer
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = 0
+        } 
+    },
+
+    1000)
+
+//Declare variable to time in miliseconds and set function for window alert
+    var totalMins = 302000
+    
+    setTimeout( function () { 
+        alert( "আপনার সময় শেষ! দয়া করে সাবমিট করুন!" ); 
+    }, 
+     totalMins);
+}
+
+
+//Sets the counter to three minutes 
+//Change variable to chosen time 
+    window.onload = function () {
+    var fiveMinute = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinute, display);
+
+};
+    
+</script>
+
 
 	
 
@@ -124,13 +171,36 @@ width: 15%
 	display: block;
 	margin: 10px;
 }
+	
+/*-------------------Countdown--------------------------*/
+
+.countdown
+{
+    background-color:black;
+    border-style: outset ;
+     font-family: 'Inconsolata', monospace;
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -77px;
+}
+
+span
+{    
+    font-weight:bold;
+    color:red;
+}
+
+/*-------------------Countdown--------------------------*/
+	
 
 iframe{
-	margin-top: -76px;
+	margin-top: 10px;
 	height: 482px;
 	width: 100%;
 	border: none;
 }
+
 
 
 .copyright {
@@ -183,6 +253,7 @@ iframe{
 						<li><a href="start/start-bangladesh.html" >বাংলাদেশ</a></li>
 						<li><a href="start/start-ict.html" >ICT</a></li>
 						<li><a href="start/start-science.html" >বিজ্ঞান</a></li>
+					
 				</ul>
 			</div>
 		</li>
@@ -191,10 +262,17 @@ iframe{
 
 	</ul>
 </div>
+	
+<!--Create the time display in a div tag-->
+   <div class="countdown">
+        <!--Put time in span -->
+        Timer = <span id="time">05:00</span>                       minutes remaining
+   </div>
+
 <!--=============================================================================
 	============================================================================-->
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_6WI7qb7GqFJt0P53k6DPS6eDBGyemNKH-gRXyT0KqYZG1w/viewform?embedded=true"  marginheight="0" marginwidth="0">Loading…</iframe>
+	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_6WI7qb7GqFJt0P53k6DPS6eDBGyemNKH-gRXyT0KqYZG1w/viewform?embedded=true"  marginheight="0" marginwidth="0">Loading…</iframe>
      <div class="copyright">
      	<div class="badge">
         Samrat Inc.
