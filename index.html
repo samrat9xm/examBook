@@ -6,36 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="shortcut icon" href="start/1.ico">
-
- <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-        
-        <script>
-            
-$(function(){
-    setInterval(time,1000);});
-function time(){
-    var d = new Date();
-    var sec = d.getSeconds().toString();
-    var min = d.getMinutes().toString();
-    var hour = d.getHours().toString();
-    var ampm;
-    if(hour > 12){
-        ampm = "PM";
-        hour %= 12;}
-    else {
-        ampm = "AM";}
-    if(sec.length == 1)
-        sec = 0 + sec;
-    if(min.length == 1)
-        min = 0 + min;
-    if(hour.length == 1)
-        hour = 0 + hour;
-    $("#hours").text(hour);
-    $("#mins").text(min);
-    $("#seconds").text(sec);
-    $("#ampm").text(ampm);
-}
-        </script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
 
 <style type="text/css">
 
@@ -76,11 +47,12 @@ html{
 
 
 .a1{
-	background: #D83B01;
+	background: #0984e3;
 	overflow: hidden;
-	height: 56px;
+	height: 59px;
 	width: 100%;
 	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.9);
+	position: relative;
 }
 
 
@@ -89,11 +61,15 @@ html{
 	color: #fff;
 	text-decoration: none;
 	font-size: 30px;
-	font-family: cursive;
-	width: 100%;
+	font-family: tahoma;
+	width: 160px;
 	display: block;
 	text-align: center;
-	margin-top: 7px;
+	position: absolute;
+	top: 7px;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
 .a2:hover{
@@ -103,10 +79,10 @@ html{
 
 .a3{
 	text-align: right;
-	margin-top: -27px;
-	margin-right: 17px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 	color: white;
-	font-family: verdana;
 }
 
 #routine{
@@ -288,18 +264,9 @@ footer a{
 
 <div id="top" class="a1">
 	<a class="a2" href="index.html">exambook</a>
-	<p class="a3">Home</p>
+	<p class="a3"><i class="fas fa-home"></i></p>
 </div>
-<div class="clock">
-        <div id="container">
-            <span id="hours"></span>
-            <span>:</span>
-            <span id="mins"></span>
-            <span>:</span>
-            <span id="seconds"></span>
-            <span id="ampm"></span>
-        </div>
-    </div>
+
 <!--=============================================================================
 	============================================================================-->
 
